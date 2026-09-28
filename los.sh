@@ -1,31 +1,24 @@
 #!/bin/bash
 
 # repo init
-# repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 17 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 -u https://github.com/Lunaris-AOSP/android.git -b 16.2 --git-lfs
 
 # sync + remove dirty
-# /opt/crave/resync.sh
-# repo sync -c --force-sync --force-remove-dirty --no-tags --no-clone-bundle # For fixing sync error
+/opt/crave/resync.sh
 
 # device source
-# git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Infinity-17 device/xiaomi/earth
+git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
-# patch build/soong
-# cd build/soong
-# wget https://raw.githubusercontent.com/dreamsolister26/clarinet/refs/heads/main/soong.patch
-# patch -p1 < soong.patch && rm -f soong.patch
-# cd ../..
+# custom source
+rm -rf vendor/lineage
+git clone https://github.com/eupho26/vendor_lunaris.git -b 16.2 vendor/lineage --depth=1
+
+export BUILD_USERNAME=eupho
+export BUILD_HOSTNAME=minami
 
 # build start
 . build/envsetup.sh
-
-export BUILD_USERNAME=zukki
-export BUILD_HOSTNAME=sweet_bullet
-export SOONG_NINJA=ninja
-
-# start build
-lunch infinity_earth-userdebug
-make installclean
+lunch lineage_earth-bp4a-userdebug
 mka bacon
 
 # Upload files to gofile
