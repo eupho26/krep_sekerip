@@ -1,0 +1,31 @@
+diff --git a/res/values-in-rID/cr_strings.xml b/res/values-in-rID/cr_strings.xml
+index fcc7bf8..29c6ad5 100644
+--- a/res/values-in-rID/cr_strings.xml
++++ b/res/values-in-rID/cr_strings.xml
+@@ -1395,9 +1395,6 @@ Beberapa layar mungkin tampak mati.</string>
+     <string name="gs_config_saved">Konfigurasi tersimpan</string>
+     <string name="gs_loading_apps">Memuat aplikasi\u2026</string>
+     <string name="gs_failed">Gagal: %s</string>
+-    <!-- Build details -->
+-    <string name="build_maintainer_title">Pengelola perangkat</string>
+-    <string name="build_maintainer_summary">Tidak resmi</string>
+     <!-- Settings UI -->
+     <string name="settings_icon_title">Gaya setelan</string>
+     <string name="settings_icon_summary">Sesuaikan gaya UI aplikasi Setelan</string>
+diff --git a/res/values/cr_strings.xml b/res/values/cr_strings.xml
+index 99bb134..c1a805a 100644
+--- a/res/values/cr_strings.xml
++++ b/res/values/cr_strings.xml
+@@ -1637,9 +1637,9 @@ A small donation helps keep this project alive and improving. You can dismiss th
+     <string name="gs_failed">Failed: %s</string>
+ 
+     <!-- Build details -->
+-    <string name="build_maintainer_title">Device maintainer</string>
+-    <string name="build_maintainer_summary">Unofficial</string>
+-    <string name="build_maintainer_donate_url" translatable="false">https://crdroid.net/donate</string>
++    <string name="build_maintainer_title">Maintainer</string>
++    <string name="build_maintainer_summary">dreamsolister26</string>
++    <string name="build_maintainer_donate_url" translatable="false">https://youtu.be/EojdOX-qBwM?si=1sWL3LSYURSuxr_H</string>
+ 
+     <!-- Settings UI -->
+     <string name="settings_icon_title">Settings style</string>
