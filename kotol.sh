@@ -12,7 +12,7 @@ git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b In
 
 # patch build/soong
 cd build/soong
-curl -LSs "" | git am
+curl -LSs "https://github.com/sweet-bullet/build_soong_evo/commit/47b4d25fbb8e1713f1304dc78f357a0d858946a2.patch" | git am
 cd ../..
 
 export BUILD_USERNAME=eupho
