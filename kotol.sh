@@ -8,8 +8,8 @@
 # repo sync -c --force-sync --force-remove-dirty --no-tags --no-clone-bundle # For fixing sync error
 
 # device source
-rm -rf device/xiaomi/earth
-git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Infinity-17 device/xiaomi/earth
+# rm -rf device/xiaomi/earth
+# git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Infinity-17 device/xiaomi/earth
 
 # patch build/soong
 # cd build/soong
@@ -17,9 +17,9 @@ git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b In
 # cd ../..
 
 # patching vendor/infinity
-cd vendor/infinity
-curl -LSs "https://github.com/eupho26/vendor_infinity/commit/ff6fbc375f4d01aa6c8e82225f9a982130a54213.patch" | git am
-cd ../..
+# cd vendor/infinity
+# curl -LSs "https://github.com/eupho26/vendor_infinity/commit/ff6fbc375f4d01aa6c8e82225f9a982130a54213.patch" | git am
+# cd ../..
 
 export BUILD_USERNAME=eupho
 export BUILD_HOSTNAME=minami
