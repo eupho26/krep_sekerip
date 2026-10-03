@@ -12,9 +12,14 @@ git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Pi
 
 # setup build enviroment
 . build/envsetup.sh
+
+# export
 export BUILD_USERNAME=eupho
 export BUILD_HOSTNAME=minami
+export KBUILD_BUILD_USER="kumiko" 
+export KBUILD_BUILD_HOST="kitauji_quartet"
 export SOONG_NINJA=ninja
+
 # starting build
 breakfast earth userdebug
 m pixelos
