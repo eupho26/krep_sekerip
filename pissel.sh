@@ -10,17 +10,18 @@ repo sync -c --force-sync --force-remove-dirty --no-tags --no-clone-bundle # For
 # device source
 git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
+# setup build enviroment
+. build/envsetup.sh
 export BUILD_USERNAME=eupho
 export BUILD_HOSTNAME=minami
-
-# build start
-. build/envsetup.sh
+export SOONG_NINJA=ninja
+# starting build
 breakfast earth userdebug
 m pixelos
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
-if [ -f out/target/product/earth/*202609*.zip ]; then
+if [ -f out/target/product/earth/*202610*.zip ]; then
     wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
     chmod +x upload.sh ; ./upload.sh out/target/product/earth/PixelOS_*.zip
     echo "Upload Done!"
