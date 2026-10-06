@@ -17,9 +17,8 @@ git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Sh
 
 # patching build/soong
 cd build/soong
-git fetch --unshallow
-git fetch https://github.com/aobuta-prjkt/android_build_soong.git seventeen
-git cherry-pick 798709d705ee46dac76cdad4432fd0ad12918e8e && git cherry-pick 01a631a4a9bcb308e26bcdf39382469392af5c22
+curl -LSs "https://github.com/aobuta-prjkt/android_build_soong/commit/798709d705ee46dac76cdad4432fd0ad12918e8e.patch" | git am
+curl -LSs "https://github.com/aobuta-prjkt/android_build_soong/commit/01a631a4a9bcb308e26bcdf39382469392af5c22.patch" | git am
 cd ../..
 
 # patching frameworks/base
