@@ -15,6 +15,18 @@ repo sync -c --force-sync --force-remove-dirty --no-tags --no-clone-bundle # For
 # device source
 git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Shinkai-17 device/xiaomi/earth
 
+# patching build/soong
+cd build/soong
+git fetch --unshallow
+git fetch https://github.com/aobuta-prjkt/android_build_soong.git seventeen
+git cherry-pick 798709d705ee46dac76cdad4432fd0ad12918e8e && git cherry-pick 01a631a4a9bcb308e26bcdf39382469392af5c22
+cd ../..
+
+# patching frameworks/base
+cd frameworks/base
+curl -LSs "https://github.com/aobuta-prjkt/android_frameworks_base/commit/861936436049e8e1edf573e86c2e5aa834043c08.patch" | git am
+cd ../..
+
 # setup build enviroment
 . build/envsetup.sh
 
