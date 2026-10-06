@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # repo init
-git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+git config --global url."https://x-access-token:${GUTHIB}@github.com/".insteadOf "https://github.com/"
 repo init -u https://github.com/ShinkaiProject/shinkai_manifest.git -b heptakaideka --git-lfs --depth=1 
 
 # Crave Sync + remove dirty
