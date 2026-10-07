@@ -9,7 +9,7 @@ repo init -u https://github.com/aobuta-prjkt/pixelos_manifest.git -b seventeen -
 
 # Crave Sync + remove dirty
 /opt/crave/resync.sh
-repo sync -c --force-sync --force-remove-dirty --no-tags --no-clone-bundle # For fixing sync error
+repo sync -c --force-sync --force-remove-dirty --no-tags --no-clone-bundle
 
 # device source
 git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
@@ -26,7 +26,6 @@ export SOONG_NINJA=ninja
 
 # starting build
 breakfast earth userdebug
-make installclean
 m pixelos
 
 # Upload files to gofile
