@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -f $(pwd)/.secrets ]; then
+    source "$(pwd)/.secrets"
+else
+    echo "no .secrets found at $(pwd)"
+fi
+
 # remove device source
 rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
 rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
