@@ -43,6 +43,7 @@ export SOONG_NINJA=ninja
 
 # starting build
 breakfast earth userdebug
+make installclean
 mka shinkai
 
 # Upload files to gofile
