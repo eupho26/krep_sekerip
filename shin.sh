@@ -17,11 +17,12 @@ rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
 rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
 
 # setup git config & init
-git config --global url."https://${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
 repo init -u https://github.com/ShinkaiProject/shinkai_manifest.git -b heptakaideka --git-lfs --depth=1
 
 # Crave Sync + remove dirty
 /opt/crave/resync.sh
+repo sync -c --force-sync --no-clone-bundle --no-tags --force-remove-dirty
 
 # device source
 git clone https://github.com/MinamiQuartet/android_device_xiaomi_earth.git -b Shinkai-17 device/xiaomi/earth
