@@ -1,5 +1,15 @@
+From 0f2af36a78bcfca3e1b7f48b4e9f3225494580eb Mon Sep 17 00:00:00 2001
+From: dreamsolister26 <oumaekumiko123@gmail.com>
+Date: Sat, 10 Oct 2026 10:39:57 +0700
+Subject: [PATCH] common: Disable blurs
+
+Signed-off-by: dreamsolister26 <oumaekumiko123@gmail.com>
+---
+ config/common.mk | 7 -------
+ 1 file changed, 7 deletions(-)
+
 diff --git a/config/common.mk b/config/common.mk
-index 0aae8d7..7f28203 100644
+index 0aae8d7ab..7f28203ae 100644
 --- a/config/common.mk
 +++ b/config/common.mk
 @@ -179,13 +179,6 @@ PRODUCT_PACKAGES += \
