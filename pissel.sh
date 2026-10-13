@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# remove device source
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
-
 # repo init
 repo init -u https://github.com/aobuta-prjkt/pixelos_manifest.git -b seventeen --git-lfs --depth=1
 
@@ -22,11 +18,9 @@ export BUILD_USERNAME=eupho
 export BUILD_HOSTNAME=minami
 export KBUILD_BUILD_USER="kumiko" 
 export KBUILD_BUILD_HOST="kitauji_quartet"
-export SOONG_NINJA=ninja
 
 # starting build
 breakfast earth userdebug
-make installclean
 m pixelos
 
 # Upload files to gofile
