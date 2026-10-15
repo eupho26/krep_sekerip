@@ -22,6 +22,7 @@ export BUILD_USERNAME=eupho
 export BUILD_HOSTNAME=minami
 export KBUILD_BUILD_USER="kumiko" 
 export KBUILD_BUILD_HOST="kitauji_quartet"
+export SOONG_NINJA=ninja
 
 # starting build
 breakfast earth userdebug
