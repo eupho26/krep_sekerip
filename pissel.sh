@@ -21,7 +21,6 @@ export KBUILD_BUILD_HOST="kitauji_quartet"
 
 # starting build
 breakfast earth userdebug
-make installclean
 m pixelos
 
 # Upload files to gofile
